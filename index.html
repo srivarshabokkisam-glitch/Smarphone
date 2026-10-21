@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Call Assistant</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo">✦</div><div><h1>Smart Call Assistant</h1><p>Your call notes, organized.</p></div><span class="badge">DEMO</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">PERSONAL CALL HUB</p><h2>Stay on top of<br><span>every conversation.</span></h2><p class="sub">Save call details, capture follow-ups, and prepare what to say next.</p></div><div class="hero-icon">☎</div></section>
+<section class="stats"><article><small>Total calls</small><strong id="total">0</strong></article><article><small>Follow-ups</small><strong id="followups">0</strong></article><article><small>Today</small><strong id="today">0</strong></article></section>
+<section class="panel"><div class="panel-head"><div><h3>Log a call</h3><p>Add a quick summary after a conversation.</p></div></div>
+<form id="callForm"><div class="grid"><label>Contact name<input id="name" required placeholder="e.g. Ananya"></label><label>Phone number<input id="phone" type="tel" placeholder="e.g. +91 98765 43210"></label><label>Call type<select id="type"><option>Incoming</option><option>Outgoing</option><option>Missed</option></select></label><label>Follow-up date<input id="date" type="date"></label></div><label>Call notes<textarea id="notes" rows="3" placeholder="What was discussed?"></textarea></label><button type="submit">＋ Save call</button></form></section>
+<section class="panel"><div class="list-head"><div><h3>Recent calls</h3><p>Your saved call history on this device.</p></div><input id="search" class="search" placeholder="Search calls…"></div><div id="calls" class="calls"></div><p id="empty" class="empty">No calls yet. Add your first call above.</p></section>
+<section class="panel helper"><h3>Smart reply helper</h3><p>Choose a situation to create a suggested message. Review it before sending.</p><div class="reply-row"><select id="situation"><option value="missed">I missed your call</option><option value="follow">Following up on our conversation</option><option value="busy">I’m busy right now</option><option value="thanks">Thank you for calling</option></select><button type="button" id="generate">Create reply</button></div><textarea id="reply" rows="3" placeholder="Your suggested reply appears here…"></textarea><button type="button" class="secondary" id="copy">Copy reply</button></section>
+</main><footer>Prototype only · Calls are not recorded or placed. Data stays in this browser.</footer><script src="app.js"></script></body></html>
